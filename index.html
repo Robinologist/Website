@@ -11,18 +11,45 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li id="pageTab0"><a href="index.html">Home</a></li>
-                <li id="pageTab1"><a href="programming.html">Programming</a></li>
-                <li id="pageTab2"><a href="editing.html">Editing</a></li>
-                <li id="pageTab3"><a href="music.html">Music</a></li>
-                <li id="pageTab4"><a href="writing.html">Writing</a></li>
+            <ul class="glass">
+                <li class="pageTab" id="selectedTab">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="pageTab">
+                    <p>Music</p>
+                    <ul class="glass pageTabBlurb">
+                        <a href="music.html">Midi Songs</a>
+                        <a href="music.html">Compositions</a>
+                    </ul>
+                </li>
+                <li class="pageTab">
+                    <p>Programming</p>
+                    <ul class="glass pageTabBlurb">
+                        <a href="programming.html">Game Design Passion Projects</a>
+                        <a href="programming.html">Parkour Tag</a>
+                        <a href="programming.html">Clark University Coding Camp</a>
+                    </ul>
+                </li>
+                <li class="pageTab">
+                    <p>Writing</p>
+                    <ul class="glass pageTabBlurb">
+                        <a href="writing.html">Poetry</a>
+                        <a href="writing.html">Storytelling</a>
+                    </ul>
+                </li>
+                <li class="pageTab">
+                    <p>Editing</p>
+                    <ul class="glass pageTabBlurb">
+                        <a href="editing.html">Impulse City Films</a>
+                    </ul>
+                </li>
             </ul>
         </nav>
+
         <div class="flex-container">
             <img src="images/homepage-bg.png" alt="Portrait">
             <div class="image-overlay">
-                <p><strong>Hi, I'm Robin!</strong> I'm a musician, programmer, editor, & writer, and this website is where I've documented all of my projects from the past couple of years so that you (yes, you) can peruse all the cool things I've made!</p>
+                <p><strong>Hi, I'm Robin!</strong> I'm a musician, programmer, writer, and editor. This website is where I've documented all of my projects from the past couple of years so that you (yes, you) can peruse all the cool things I've made!</p>
             </div>
         </div>
     </header>

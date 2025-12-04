@@ -1,15 +1,17 @@
 :root
 {
-    --base-color: #1d492f;
+    --base-color: #000000;
     --text-color: #ffffff;
-    --glass-color: #ffffff32;
+    --glass-color: #ffffff30;
     --accent-color: #a74646;
     --max-width: 1150px;
+    --tab-width: 10rem;
+    --border-radius: 0.25rem;
     --thin-border-width: 1.5px;
     --hover-animation-duration: 0.25s;
 }
 
-/* #region Main */
+/* #region Foundations */
 *
 {
     margin: 0;
@@ -34,53 +36,107 @@ body
     width: min(100%, --max-width);
     height: 100%;
 
-    justify-content: center;
-
     display: flex;
-    align-items: flex-end;
     flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+/* #endregion */
+
+/* #region Glass Effect */
+.glass
+{
+    backdrop-filter: blur(4px);
+    background: var(--glass-color);
 }
 /* #endregion */
 
 /* #region Navbar */
-nav
-{
-    width: 100%;
-
-    z-index: 5;
-    position: relative;
-    margin: 0 auto 0 auto;
-    padding: 1rem 0 1rem 0;
-
-    backdrop-filter: blur(4px);
-    background: var(--glass-color);
-    border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
-
-    box-shadow: 0 0 4px var(--outline-width) #00000075;
-    box-shadow: 0 0 10px var(--outline-width) #00000050;
-}
-
 nav ul
 {
+    z-index: 5;
+    position: relative;
+    
+    width: 100%;
+    height: 3.25rem;
+
     display: flex;
-    align-items: center;
+    justify-content: center;
     list-style-type: none;
+    
+    border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav a
+nav .pageTab
 {
+    width: var(--tab-width);
+    text-align: center;
+}
+
+nav .pageTab:first-child
+{
+    border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+}
+
+nav .pageTab:last-child
+{
+    border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+}
+
+nav .pageTab p, .pageTab a
+{
+    padding: 1rem 2rem;
+
     color: var(--text-color);
     text-decoration: none;
-    padding: 1rem 2rem 1rem 2rem;
+
     background-color: #ffffff00;
+    transition: var(--hover-animation-duration);
+    display: block;
+}
+
+nav .pageTab p:hover, .pageTab a:hover
+{
+    background-color: var(--glass-color);
     transition: var(--hover-animation-duration);
 }
 
-nav a:hover
+nav .pageTab a:hover
 {
     text-decoration: underline;
-    background-color: var(--glass-color);
-    transition: var(--hover-animation-duration);
+}
+
+nav .pageTabBlurb
+{
+    width: max-content;
+    min-width: 100%;
+    height: max-content;
+
+    display: none;
+    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+    border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+}
+
+nav .pageTab:hover .pageTabBlurb
+{
+    display: block;
+}
+
+nav .pageTabBlurb p, .pageTabBlurb a
+{
+    padding: 1.25rem 1.5rem;
+}
+
+nav #selectedTab
+{
+    font-weight: bold;
+    /* background-color: var(--glass-color); */
 }
 /* #endregion */
 
@@ -88,11 +144,11 @@ nav a:hover
 header img
 {
     z-index: 1;
-    position: fixed;
-    top: 0;
-
     width: 1500px;
     height: calc(100% + 40px);
+
+    position: fixed;
+    top: 0;
     transform: translate(0, -40px);
 
     object-fit: cover;
@@ -103,9 +159,12 @@ header img
 {
     z-index: 2;
     width: min(var(--max-width), 100%);
+    
+    display: block;
     padding: 2rem;
 
-    display: block;
+    position: fixed;
+    bottom: 0;
     text-align: center;
 
     color: var(--text-color);
