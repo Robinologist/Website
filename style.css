@@ -6,8 +6,10 @@
     --accent-color: #a74646;
     --max-width: 1150px;
     --thin-border-width: 1.5px;
+    --hover-animation-duration: 0.25s;
 }
 
+/* #region Main */
 *
 {
     margin: 0;
@@ -27,6 +29,20 @@ body
     background-color: var(--base-color);
 }
 
+.flex-container
+{
+    width: min(100%, --max-width);
+    height: 100%;
+
+    justify-content: center;
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+/* #endregion */
+
+/* #region Navbar */
 nav
 {
     width: 100%;
@@ -34,7 +50,7 @@ nav
     z-index: 5;
     position: relative;
     margin: 0 auto 0 auto;
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
 
     backdrop-filter: blur(4px);
     background: var(--glass-color);
@@ -49,39 +65,26 @@ nav ul
     display: flex;
     align-items: center;
     list-style-type: none;
-    gap: 1rem;
-}
-
-nav li:first-child
-{
-    font-weight: bold;
-    margin-right: auto;
 }
 
 nav a
 {
     color: var(--text-color);
     text-decoration: none;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: #ffffff00;
+    transition: var(--hover-animation-duration);
 }
 
 nav a:hover
 {
     text-decoration: underline;
+    background-color: var(--glass-color);
+    transition: var(--hover-animation-duration);
 }
+/* #endregion */
 
-.flex-container
-{
-    width: min(100%, --max-width);
-    height: 100%;
-
-    justify-content: center;
-
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
+/* #region BG-Image */
 header img
 {
     z-index: 1;
@@ -108,3 +111,4 @@ header img
     color: var(--text-color);
     font-size: larger;
 }
+/* #endregion */
