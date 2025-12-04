@@ -8,7 +8,8 @@
     --tab-width: 10rem;
     --border-radius: 0.25rem;
     --thin-border-width: 1.5px;
-    --hover-animation-duration: 0.25s;
+    --hover-tab-animation-duration: 0.25s;
+    --fade-blurb-animation-duration: 0.125s;
 }
 
 /* #region Foundations */
@@ -91,17 +92,17 @@ nav .pageTab p, .pageTab a
     text-decoration: none;
 
     background-color: #ffffff00;
-    transition: var(--hover-animation-duration);
+    transition: var(--hover-tab-animation-duration);
     display: block;
 }
 
-nav .pageTab p:hover, .pageTab a:hover
+nav .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
 {
     background-color: var(--glass-color);
-    transition: var(--hover-animation-duration);
+    transition: var(--hover-tab-animation-duration);
 }
 
-nav .pageTab a:hover
+nav .pageTab a:hover, .pageTab a:focus-visible
 {
     text-decoration: underline;
 }
@@ -112,8 +113,10 @@ nav .pageTabBlurb
     min-width: 100%;
     height: max-content;
 
-    display: none;
-    
+    pointer-events: none;
+    display: block;
+    opacity: 0;
+
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
@@ -121,11 +124,14 @@ nav .pageTabBlurb
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
     border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+
+    transition: opacity var(--fade-blurb-animation-duration) ease-in-out;
 }
 
-nav .pageTab:hover .pageTabBlurb
+nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
 {
-    display: block;
+    pointer-events: all;
+    opacity: 1;
 }
 
 nav .pageTabBlurb p, .pageTabBlurb a
@@ -136,7 +142,6 @@ nav .pageTabBlurb p, .pageTabBlurb a
 nav #selectedTab
 {
     font-weight: bold;
-    /* background-color: var(--glass-color); */
 }
 /* #endregion */
 
