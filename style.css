@@ -40,6 +40,7 @@ body
     height: 100%;
 
     display: flex;
+    flex: 1 1;
     align-items: center;
     justify-content: center;
 }
@@ -138,11 +139,6 @@ nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pa
 nav .pageTabBlurb p, .pageTabBlurb a
 {
     padding: 1.25rem 1.5rem;
-}
-
-nav #selectedTab
-{
-    font-weight: bold;
 }
 /* #endregion */
 

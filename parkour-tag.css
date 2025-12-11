@@ -2,8 +2,9 @@
 {
     /* Defined Variables */
     --base-color: #7de3ff;
-    --text-color: #000000;
     --accent-color: #ca5858;
+    --text-color: #000000;
+    --accent-text-color: #ffffff;
     --panel-color: #8ff7ff;
     --border-radius-large: 1rem;
 
@@ -11,13 +12,7 @@
     --border-radius-small: calc(var(--border-radius-large) / 2);
 }
 
-p
-{
-    padding: 1rem 4rem;
-    text-align: center;
-    font-size: x-large;
-}
-
+/* #region Basics */
 .panel
 {
     background-color: var(--panel-color);
@@ -25,21 +20,6 @@ p
     margin: 1rem;
     border-radius: var(--border-radius-large);
     overflow: hidden;
-}
-
-.video-embed
-{
-    padding: 1rem;
-    width: 100%;
-}
-
-iframe
-{
-    aspect-ratio: 16/9;
-    height: 100%;
-    width: 100%;
-
-    border-radius: var(--border-radius-small);
 }
 
 hr
@@ -52,37 +32,75 @@ hr
     border-radius: 1px;
 }
 
-h2
+.flex-half
+{
+    flex-basis: 50%;
+}
+/* #endregion */
+
+/* #region Text */
+.content h2
 {
     text-align: center;
     padding-top: 1rem;
 }
 
+.content p
+{
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+.link-button
+{
+    margin: 2rem;
+    text-align: center;
+}
+
+.link-button a
+{
+    color: var(--accent-text-color);
+    font-size: x-large;
+    text-decoration: none;
+
+    background-color: var(--accent-color);
+
+    border: 1rem var(--accent-color) solid;
+    border-radius: var(--border-radius-small);
+}
+/* #endregion */
+
+/* #region Embeds */
+.media-embed
+{
+    height: 100%;
+    width: 100%;
+
+    padding: 1rem;
+    border-radius: calc(1rem + var(--border-radius-small));
+
+    flex-basis: 50%;
+}
+
+.video-embed
+{
+    aspect-ratio: 16/9;
+}
+
+#pkt-wrapped
+{
+    aspect-ratio: 1;
+}
+
 img
 {
     object-fit: fill;
+
     width: 100%;
     height: 100%;
 
     padding: 1rem;
     border-radius: calc(1rem + var(--border-radius-small));
 }
-
-.vertical-flex
-{
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-
-.left-half
-{
-    display: block;
-    width: 50%;
-}
-
-.right-half
-{
-    display: block;
-    width: 50%;
-}
+/* #endregion */
