@@ -1,9 +1,11 @@
 :root
 {
+    /* Defined Variables */
     --base-color: #000000;
+    --accent-color: #ca5858;
     --text-color: #ffffff;
     --glass-color: #ffffff30;
-    --accent-color: #ca5858;
+
     --max-width: 1150px;
     --tab-width: 10rem;
     --tab-border-radius: 0.25rem;
@@ -139,42 +141,5 @@ nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pa
 nav .pageTabBlurb p, .pageTabBlurb a
 {
     padding: 1.25rem 1.5rem;
-}
-/* #endregion */
-
-/* #region BG-Image */
-header img
-{
-    z-index: 1;
-    width: 1500px;
-    height: calc(100% + 40px);
-
-    position: fixed;
-    top: 0;
-    transform: translate(0, -40px);
-
-    object-fit: cover;
-    object-position: top;
-}
-
-.image-overlay
-{
-    z-index: 2;
-    width: min(var(--max-width), 100%);
-    
-    display: block;
-    padding: 2rem;
-
-    position: fixed;
-    bottom: 2rem;
-    text-align: center;
-
-    color: var(--text-color);
-    font-size: x-large;
-}
-
-.image-overlay p
-{
-    padding: 1.5rem 0;
 }
 /* #endregion */

@@ -1,55 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parkour Tag - Robin Engdahl</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
     <link rel="stylesheet" href="parkour-tag.css">
 </head>
+
 <body>
+    <div id="navbar-placeholder"></div>
     <header>
-        <nav>
-            <ul class="glass">
-                <li class="pageTab">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="pageTab">
-                    <p>Music</p>
-                    <ul class="glass pageTabBlurb">
-                        <a href="error.html">Midi Songs</a>
-                        <a href="error.html">Compositions</a>
-                    </ul>
-                </li>
-                <li class="pageTab">
-                    <p><strong>Programming</strong></p>
-                    <ul class="glass pageTabBlurb">
-                        <a href="error.html">Game Design Passion Projects</a>
-                        <a href="parkour-tag.html">Parkour Tag</a>
-                        <a href="error.html">Clark University Coding Camp</a>
-                    </ul>
-                </li>
-                <li class="pageTab">
-                    <p>Editing</p>
-                    <ul class="glass pageTabBlurb">
-                        <a href="error.html">Impulse City Films</a>
-                    </ul>
-                </li>
-                <li class="pageTab">
-                    <p>Writing</p>
-                    <ul class="glass pageTabBlurb">
-                        <a href="error.html">Poetry</a>
-                        <a href="error.html">Storytelling</a>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="content">
         <div class="panel">
             <p><strong>Parkour Tag</strong> (abbreviated to <strong>PKT</strong>) is my longest-running programming passion project, started back in <i>October 2021</i>.</p>
             <p>In short, PKT is a game I programmed for my friends to play within <i>Minecraft</i>, using the game's built-in datapack programming language. Throughout the years I've updated it many times to add new gamemodes, features, and bug-fixes, and I've ended up completely refactoring and redesigning the game multiple times from the ground up to incorporate new programming skills and techniques that I learn.</p>
         </div>
+    </header>
+    <main>
         <hr>
         <div class="flex-container panel">
             <div class="flex-half">
@@ -96,6 +65,27 @@
             <img class="flex-half media-embed" src="images/pkt/pkt-wrapped.png" alt="pkt wrapped slideshow">
             <iframe id="pkt-wrapped" class="flex-half media-embed" src="https://docs.google.com/presentation/d/e/2PACX-1vQOqFOoO2uvMcpP1ILTC-N2lcwR77aYA204L8jEmK59xpUE2CCotFaGQ8Ql8j4lVdbGfmgy_Sv1y1fN/pubembed?start=false&loop=true&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
-    </div>
+    </main>
 </body>
+
+<script>
+  // Fetch the navigation component
+  fetch('nav.html')
+    .then(response => {
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text(); // Convert response to text
+    })
+    .then(navHTML => {
+      // Insert the navigation HTML into the placeholder
+      document.getElementById('navbar-placeholder').innerHTML = navHTML;
+    })
+    .catch(error => {
+      // Log errors (e.g., if nav.html is missing)
+      console.error('Error loading navigation:', error);
+    });
+</script>
+
 </html>
