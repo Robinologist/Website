@@ -1,9 +1,9 @@
 :root
 {
     /* Defined Variables */
-    --base-color: #7de3ff;
-    --accent-color: #ca5858;
-    --panel-color: #8ff7ff;
+    --base-color: rgb(207, 84, 84);
+    --accent-color: #79DCF6;
+    --panel-color: #E06666;
 }
 
 #pkt-wrapped
