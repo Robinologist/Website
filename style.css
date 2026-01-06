@@ -57,7 +57,7 @@ body
 /* #endregion */
 
 /* #region Navbar */
-nav ul
+#navbar-placeholder ul
 {
     z-index: 5;
     position: relative;
@@ -72,23 +72,23 @@ nav ul
     border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab
+#navbar-placeholder .pageTab
 {
     width: var(--tab-width);
     text-align: center;
 }
 
-nav .pageTab:first-child
+#navbar-placeholder .pageTab:first-child
 {
     border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab:last-child
+#navbar-placeholder .pageTab:last-child
 {
     border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab p, .pageTab a
+#navbar-placeholder .pageTab p, .pageTab a
 {
     padding: 1rem 2rem;
 
@@ -100,18 +100,18 @@ nav .pageTab p, .pageTab a
     display: block;
 }
 
-nav .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
+#navbar-placeholder .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
 {
     background-color: var(--glass-color);
     transition: var(--hover-tab-animation-duration);
 }
 
-nav .pageTab a:hover, .pageTab a:focus-visible
+#navbar-placeholder .pageTab a:hover, .pageTab a:focus-visible
 {
     text-decoration: underline;
 }
 
-nav .pageTabBlurb
+#navbar-placeholder .pageTabBlurb
 {
     width: max-content;
     min-width: 100%;
@@ -132,13 +132,13 @@ nav .pageTabBlurb
     transition: opacity var(--fade-blurb-animation-duration) ease-in-out;
 }
 
-nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
+#navbar-placeholder .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
 {
     pointer-events: all;
     opacity: 1;
 }
 
-nav .pageTabBlurb p, .pageTabBlurb a
+#navbar-placeholder .pageTabBlurb p, .pageTabBlurb a
 {
     padding: 1.25rem 1.5rem;
 }

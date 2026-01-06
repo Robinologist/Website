@@ -7,19 +7,26 @@
     --text-color: #000000;
     --accent-text-color: #ffffff;
     --border-radius-large: 1rem;
+    --max-panel-width: 50rem;
 
     /* Calculated Variables */
     --border-radius-small: calc(var(--border-radius-large) / 2);
 }
 
 /* #region Basics */
-.panel
+.panel, .contrained-panel
 {
     background-color: var(--panel-color);
 
     margin: 1rem;
     border-radius: var(--border-radius-large);
     overflow: hidden;
+}
+
+.contrained-panel
+{
+    margin: 1rem auto;
+    width: min(100% - 2rem, var(--max-panel-width));
 }
 
 hr
