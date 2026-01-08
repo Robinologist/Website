@@ -57,7 +57,7 @@ body
 /* #endregion */
 
 /* #region Navbar */
-#navbar-placeholder ul
+nav ul
 {
     z-index: 5;
     position: relative;
@@ -72,23 +72,23 @@ body
     border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-#navbar-placeholder .pageTab
+nav .pageTab
 {
     width: var(--tab-width);
     text-align: center;
 }
 
-#navbar-placeholder .pageTab:first-child
+nav .pageTab:first-child
 {
     border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-#navbar-placeholder .pageTab:last-child
+nav .pageTab:last-child
 {
     border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-#navbar-placeholder .pageTab p, .pageTab a
+nav .pageTab p, .pageTab a
 {
     padding: 1rem 2rem;
 
@@ -100,18 +100,18 @@ body
     display: block;
 }
 
-#navbar-placeholder .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
+nav .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
 {
     background-color: var(--glass-color);
     transition: var(--hover-tab-animation-duration);
 }
 
-#navbar-placeholder .pageTab a:hover, .pageTab a:focus-visible
+nav .pageTab a:hover, .pageTab a:focus-visible
 {
     text-decoration: underline;
 }
 
-#navbar-placeholder .pageTabBlurb
+nav .pageTabBlurb
 {
     width: max-content;
     min-width: 100%;
@@ -132,13 +132,13 @@ body
     transition: opacity var(--fade-blurb-animation-duration) ease-in-out;
 }
 
-#navbar-placeholder .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
+nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
 {
     pointer-events: all;
     opacity: 1;
 }
 
-#navbar-placeholder .pageTabBlurb p, .pageTabBlurb a
+nav .pageTabBlurb p, .pageTabBlurb a
 {
     padding: 1.25rem 1.5rem;
 }
