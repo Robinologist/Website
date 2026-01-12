@@ -40,7 +40,7 @@ hr
 /* #endregion */
 
 /* #region Resizing */
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 950px)
 {
     .panel
     {

@@ -11,7 +11,7 @@
     aspect-ratio: 1;
 }
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 950px)
 {
     #organization-text{order:1}
     #organization-img{order:2}
