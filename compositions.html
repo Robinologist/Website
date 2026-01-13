@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impulse City Films - Robin Engdahl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
+    <link rel="stylesheet" href="compositions.css">
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <header>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, mollitia qui illo, ipsam quaerat ducimus nihil quae numquam autem dicta sed cumque aut nam blanditiis similique eveniet eos. Tempora, eaque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, mollitia qui illo, ipsam quaerat ducimus nihil quae numquam autem dicta sed cumque aut nam blanditiis similique eveniet eos. Tempora, eaque.</p>
+      </div>
+  </header>
+  <hr>
+  <main>
+      <div class="constrained-panel">
+        <audio class="audio-embed" controls src="/music/An Autumn Murmuration.mp3"></audio>
+        <iframe src="/music/An Autumn Murmuration.pdf" width="100%" height="600px" title="Embedded PDF Document" frameborder="0"></iframe>  
+      </div>
+  </main>
+</body>
+
+<script>
+  // Fetch the navigation component
+  fetch('nav.html')
+    .then(response => {
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text(); // Convert response to text
+    })
+    .then(navHTML => {
+      // Insert the navigation HTML into the placeholder
+      document.getElementById('navbar-placeholder').innerHTML = navHTML;
+    })
+    .catch(error => {
+      // Log errors (e.g., if nav.html is missing)
+      console.error('Error loading navigation:', error);
+    });
+</script>
+
+</html>
