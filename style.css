@@ -38,13 +38,23 @@ body
 /* #region Flex Container */
 .flex-container
 {
-    width: min(100%, --max-width);
-    height: 100%;
-
     display: flex;
     flex: 1 1;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 950px)
+{
+    .flex-container:has(.video-embed), .flex-container:has(iframe)
+    {
+        display: block;
+    }
+
+    .flex-container
+    {
+        flex-flow: column;
+    }
 }
 /* #endregion */
 
