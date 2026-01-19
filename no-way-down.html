@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Way Down - Robin Engdahl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
+    <link rel="stylesheet" href="no-way-down.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <header>
+        <div class="panel flex-container">
+            <div>
+                <p>Over the summer of 2024, I attended <a href="https://www.clarku.edu/design-technology/academics/summer-programs/">Clark University's Summer Game Studio</a> in Massachusetts.</p>
+                <p>Over the two-weeks of camp, my team and I created a small escape-room style puzzle game called <b>No Way Down</b>, with me as the sole programmer.</p>
+            </div>
+            <iframe class="media-embed video-embed"  src="https://www.youtube.com/embed/2C-9dmO2hfc" title="No Way Down Trailer" alt="trailer video embed" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </header>
+    <main>
+    <hr>
+    <div class="panel">
+        <p>Here's the presentation that my group and I gave at the end of the camp outlining our process, and the slides to go with it:</p>
+        <div class="flex-container">
+            <iframe class="flex-half media-embed video-embed" src="https://www.youtube.com/embed/auBwLOw81mw" title="No Way Down Presentation" alt="trailer video embed" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="nwd-slides" class="flex-half media-embed" src="https://docs.google.com/presentation/d/e/2PACX-1vRodtLfXFdAaO1t5yGUzSD8-GdamYt-RMUYS-RJK2qrGVglDPBBHtihKdd6VYUzgWaQo78_j79gyd1f/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+    </div>
+    </main>
+</body>
+
+<script>
+  // Fetch the navigation component
+  fetch('nav.html')
+    .then(response => {
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text(); // Convert response to text
+    })
+    .then(navHTML => {
+      // Insert the navigation HTML into the placeholder
+      document.getElementById('navbar-placeholder').innerHTML = navHTML;
+    })
+    .catch(error => {
+      // Log errors (e.g., if nav.html is missing)
+      console.error('Error loading navigation:', error);
+    });
+</script>
+
+</html>

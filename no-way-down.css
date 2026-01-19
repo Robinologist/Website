@@ -1,0 +1,12 @@
+:root
+{
+    /* Defined Variables */
+    --base-color: #7cbc9d;
+    --accent-color: #0D1116;
+    --panel-color: #66e0bb;
+}
+
+#nwd-slides
+{
+    aspect-ratio: 16/9;
+}
