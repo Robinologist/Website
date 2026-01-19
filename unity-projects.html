@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Projects - Robin Engdahl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
+    <link rel="stylesheet" href="unity-projects.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <header>
+        <div class="panel">
+            <p>Although math isn't my best subject, I really enjoy programming. In 2023, I started teaching myself Unity to explore making games, and since then I have amassed a wealth of small coding projects and game prototypes while learning new techniques.</p>
+            <p>Here are some examples of those exploratory projects and what they've taught me:</p>
+        </div>
+    </header>
+    <main>
+        <hr>
+        <div class="flex-container panel">
+            <div class="flex-half first-order">
+                <h2>– Project –</h2>
+                <p>Description</p>
+            </div>
+            <div class="flex-half second-order">
+                <img src="/images/test-img.png">
+            </div>
+        </div>
+        <hr>
+        <div class="flex-container panel">
+            <div class="flex-half second-order">
+                <img src="/images/test-img.png">
+            </div>
+            <div class="flex-half first-order">
+                <h2>– Project –</h2>
+                <p>Description</p>
+            </div>
+        </div>
+        <hr>
+        <div class="flex-container panel">
+            <div class="flex-half second-order">
+                <h2>– Project –</h2>
+                <p>Description</p>
+            </div>
+            <div class="flex-half">
+                <img src="/images/test-img.png">
+            </div>
+        </div>
+        <hr>
+        <div class="flex-container panel">
+            <div class="flex-half second-order">
+                <img src="/images/test-img.png">
+            </div>
+            <div class="flex-half first-order">
+                <h2>– Project –</h2>
+                <p>Description</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+  // Fetch the navigation component
+  fetch('nav.html')
+    .then(response => {
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`Failed to load nav: ${response.status}`);
+      }
+      return response.text(); // Convert response to text
+    })
+    .then(navHTML => {
+      // Insert the navigation HTML into the placeholder
+      document.getElementById('navbar-placeholder').innerHTML = navHTML;
+    })
+    .catch(error => {
+      // Log errors (e.g., if nav.html is missing)
+      console.error('Error loading navigation:', error);
+    });
+</script>
+
+</html>
