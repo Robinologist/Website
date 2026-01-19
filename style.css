@@ -4,6 +4,7 @@
     --base-color: #000000;
     --accent-color: #ca5858;
     --text-color: #ffffff;
+    --accent-text-color: #000000;
     --glass-color: #ffffff30;
 
     --max-width: 1150px;
@@ -61,6 +62,12 @@ body
 /* #region Glass Effect */
 .glass
 {
+    backdrop-filter: blur(6px);
+    background: var(--glass-color);
+}
+
+.semi-glass
+{
     backdrop-filter: blur(4px);
     background: var(--glass-color);
 }
@@ -82,47 +89,64 @@ nav ul
     border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab
+#navbar-buffer
+{
+    position: relative;
+    
+    width: 100%;
+    height: 3.25rem;
+
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    
+    border-bottom: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
+}
+
+nav .page-tab
 {
     width: var(--tab-width);
+    height: 3.25rem;
     text-align: center;
 }
 
-nav .pageTab:first-child
+nav .page-tab:first-child
 {
     border-left: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab:last-child
+nav .page-tab:last-child
 {
     border-right: var(--thin-border-width) solid rgba(255, 255, 255, 0.25);
 }
 
-nav .pageTab p, .pageTab a
+nav .page-tab p, .page-tab a
 {
+    text-shadow: 0px 2px 4px var(--accent-text-color);
     padding: 1rem 2rem;
 
     color: var(--text-color);
     text-decoration: none;
 
-    background-color: #ffffff00;
     transition: var(--hover-tab-animation-duration);
     display: block;
 }
 
-nav .pageTab p:hover, .pageTab a:hover, .pageTab p:focus-visible, .pageTab a:focus-visible, .pageTab:focus-within, .pageTab:focus-within
+nav .page-tab p:hover, .page-tab a:hover, .page-tab p:focus-visible, .page-tab a:focus-visible, .page-tab:focus-within, .page-tab:focus-within
 {
     background-color: var(--glass-color);
     transition: var(--hover-tab-animation-duration);
 }
 
-nav .pageTab a:hover, .pageTab a:focus-visible
+nav .page-tab a:hover, .page-tab a:focus-visible
 {
     text-decoration: underline;
 }
 
-nav .pageTabBlurb
+nav .page-tab-blurb
 {
+    z-index: -1;
+
     width: max-content;
     min-width: 100%;
     height: max-content;
@@ -142,14 +166,29 @@ nav .pageTabBlurb
     transition: opacity var(--fade-blurb-animation-duration) ease-in-out;
 }
 
-nav .pageTab:hover .pageTabBlurb, .pageTabBlurb:hover, .pageTab:focus-within .pageTabBlurb
+nav .page-tab:hover .page-tab-blurb, .page-tab-blurb:hover, .page-tab:focus-within .page-tab-blurb
 {
     pointer-events: all;
     opacity: 1;
 }
 
-nav .pageTabBlurb p, .pageTabBlurb a
+nav .page-tab-blurb p, .page-tab-blurb a
 {
+    text-shadow: 0px 0px 8px var(--accent-text-color);
     padding: 1.25rem 1.5rem;
+}
+
+#navbar-bg
+{
+    z-index: 2;
+    width: 100%;
+    height: 3.25rem;
+
+    position: absolute;
+}
+
+.page-tab-parent
+{
+    position: absolute;
 }
 /* #endregion */
