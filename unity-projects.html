@@ -14,7 +14,9 @@
     <div id="navbar-placeholder"></div>
     <header>
         <div class="panel">
-            <p>Although math isn't my best subject, I really enjoy programming. In 2023, I started teaching myself the <i>Unity</i> game engine to explore making games, and since then I have amassed a wealth of small coding projects and game prototypes while learning new techniques.</p>
+            <p>Although math isn't my best subject, I really enjoy programming. In 2023, I started teaching myself the
+                <i>Unity</i> game engine to explore making games, and since then I have amassed a wealth of small coding
+                projects and game prototypes while learning new techniques.</p>
             <p>Here are some examples of those exploratory projects and what they've taught me:</p>
         </div>
     </header>
@@ -22,20 +24,22 @@
         <hr>
         <div class="panel">
             <div class="flex-container">
-                <div class="flex-half first-order">
+                <div class="flex-half">
                     <h2>– Rhythm Game Brawler –</h2>
-                    <p>While working on this first project, I learned about <i>finite state machines</i> and about how rhythm games synchronize events along the musical measurements of beats and bars. I also greatly improved my pixel art and animation skills throughout the project's development.</p>
+                    <p>While working on this first project, I learned about <i>finite state machines</i> and about how
+                        rhythm games synchronize events along the musical measurements of beats and bars. I also greatly
+                        improved my pixel art and animation skills throughout the project's development.</p>
                 </div>
-                <div class="flex-half second-order">
+                <div class="flex-half">
                     <div class="image-row">
-                        <img src="/images/unity-projects/rhythm-game/old pixel-art.gif">
-                        <img src="/images/unity-projects/rhythm-game/new pixel-art.gif">
+                        <img src="/images/unity-projects/rhythm/old pixel-art.gif">
+                        <img src="/images/unity-projects/rhythm/new pixel-art.gif">
                     </div>
                 </div>
             </div>
             <div class="image-row">
-                <img src="/images/unity-projects/rhythm-game/main inspector.png">
-                <img src="/images/unity-projects/rhythm-game/player inspector.png">
+                <img src="/images/unity-projects/rhythm/main inspector.png">
+                <img src="/images/unity-projects/rhythm/player inspector.png">
             </div>
         </div>
         <hr>
@@ -46,7 +50,9 @@
                 </div>
                 <div class="flex-half first-order">
                     <h2>– Centipede –</h2>
-                    <p>In my second project, I learned and implemented a procedural animation technique called <i>inverse kinematics</i> to simulate the leg movements of 2D centipede and spider sillhouettes.</p>
+                    <p>In my second project, I learned and implemented a procedural animation technique called
+                        <i>inverse kinematics</i> to simulate the leg movements of 2D centipede and spider sillhouettes.
+                    </p>
                 </div>
             </div>
             <div class="image-row">
@@ -55,46 +61,81 @@
             </div>
         </div>
         <hr>
-        <div class="flex-container panel">
-            <div class="flex-half second-order">
-                <h2>– Project –</h2>
-                <p>Description</p>
+        <div class="panel">
+            <div class="flex-container">
+                <div class="flex-half">
+                    <h2>– Arcade-Style Car Controller –</h2>
+                    <p>With this experiment, I learned to simulate spring forces and implemented simplified versions of
+                        acceleration, braking, suspension, and drift.</p>
+                </div>
+                <div class="flex-half">
+                    <img src="/images/unity-projects/car/car1.png">
+                </div>
             </div>
-            <div class="flex-half">
-                <img src="/images/test-img.png">
+            <div class="image-row">
+                <img src="/images/unity-projects/car/car2.png">
+                <img src="/images/unity-projects/car/car3.png">
             </div>
         </div>
         <hr>
-        <div class="flex-container panel">
-            <div class="flex-half second-order">
-                <img src="/images/test-img.png">
+        <div class="panel">
+            <div class="flex-container">
+                <div class="flex-half second-order">
+                    <img src="/images/test-img.png">
+                </div>
+                <div class="flex-half first-order">
+                    <h2>– Project –</h2>
+                    <p>Description</p>
+                </div>
             </div>
-            <div class="flex-half first-order">
-                <h2>– Project –</h2>
-                <p>Description</p>
+        </div>
+        <div class="panel">
+            <div class="flex-container">
+                <div class="flex-half second-order">
+                    <img src="/images/test-img.png">
+                </div>
+                <div class="flex-half first-order">
+                    <h2>– Project –</h2>
+                    <p>Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="flex-container">
+                <div class="flex-half second-order">
+                    <img src="/images/test-img.png">
+                </div>
+                <div class="flex-half first-order">
+                    <h2>– Project –</h2>
+                    <p>Description</p>
+                </div>
             </div>
         </div>
     </main>
 </body>
 
 <script>
-  // Fetch the navigation component
-  fetch('nav.html')
-    .then(response => {
-      // Check if the request was successful
-      if (!response.ok) {
-        throw new Error(`Failed to load nav: ${response.status}`);
-      }
-      return response.text(); // Convert response to text
-    })
-    .then(navHTML => {
-      // Insert the navigation HTML into the placeholder
-      document.getElementById('navbar-placeholder').innerHTML = navHTML;
-    })
-    .catch(error => {
-      // Log errors (e.g., if nav.html is missing)
-      console.error('Error loading navigation:', error);
-    });
+    // Fetch the navigation component
+    fetch('nav.html')
+        .then(response =>
+        {
+            // Check if the request was successful
+            if (!response.ok)
+            {
+                throw new Error(`Failed to load nav: ${ response.status }`);
+            }
+            return response.text(); // Convert response to text
+        })
+        .then(navHTML =>
+        {
+            // Insert the navigation HTML into the placeholder
+            document.getElementById('navbar-placeholder').innerHTML = navHTML;
+        })
+        .catch(error =>
+        {
+            // Log errors (e.g., if nav.html is missing)
+            console.error('Error loading navigation:', error);
+        });
 </script>
 
 </html>
