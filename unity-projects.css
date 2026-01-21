@@ -10,7 +10,6 @@
 
 .image-row
 {
-    margin: 1rem;
     display: flex;
     flex-direction: row;
 }
@@ -19,4 +18,5 @@
 {
     .first-order{order:1}
     .second-order{order:2}
+    .third-order{order:3}
 }
