@@ -8,6 +8,13 @@
     --accent-text-color: #000000;
 }
 
+.image-row
+{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width: 950px)
 {
     .first-order{order:1}

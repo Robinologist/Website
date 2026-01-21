@@ -55,6 +55,7 @@ body
     .flex-container
     {
         flex-flow: column;
+        align-items: inherit;
     }
 }
 /* #endregion */
