@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="unity-projects.css">
 </head>
 
-<body>
-    <div id="navbar-placeholder"></div>
-    <header>
+<body>    <header>
         <div class="panel">
             <p>Although math isn't my best subject, I really enjoy programming. In 2023, I started teaching myself the
                 <i>Unity</i> game engine to explore making games, and have since amassed a wealth of small coding projects and game prototypes all while learning new techniques.</p>
@@ -130,7 +128,7 @@
                 </div>
                 <div class="flex-half first-order">
                     <h2>– Robin's Simple Spin –</h2>
-                    <p>My latest project (as of January 2026) has been a little 2D grid-based puzzle game. Taking heavy inspiration from indie game Steven's Sausage Roll, my game consists of puzzles in which you must push, pull, and rotate differently-shaped blocks to cover all of the yellow goal tiles in a level.</p>
+                    <p>My latest project (as of January 2026) has been a little 2D grid-based puzzler. Taking heavy inspiration from indie game <i>Steven's Sausage Roll</i>, my game consists of puzzles in which you must push, pull, and rotate differently-shaped blocks to cover all of the yellow goal tiles in a level.</p>
                 </div>
             </div>
             <div class="horizontal-row">
@@ -165,25 +163,61 @@
 <script>
     // Fetch the navigation component
     fetch('nav.html')
-        .then(response =>
+    .then(response =>
+    {
+        // Check if the request was successful
+        if (!response.ok)
         {
-            // Check if the request was successful
-            if (!response.ok)
-            {
-                throw new Error(`Failed to load nav: ${ response.status }`);
-            }
-            return response.text(); // Convert response to text
-        })
-        .then(navHTML =>
+            throw new Error(`Failed to load nav: ${response.status}`);
+        }
+        return response.text(); // Convert response to text
+    })
+    .then(navHTML =>
+    {
+        // Insert the navigation HTML
+        const nav = document.createElement('nav');
+        nav.innerHTML = navHTML;
+        document.body.prepend(nav);
+    })
+    .catch(error =>
+    {
+        // Log errors (e.g., if nav.html is missing)
+        console.error('Error loading navigation:', error);
+    });
+
+    // Fetch the footer component
+    fetch('footer.html')
+    .then(response =>
+    {
+        // Check if the request was successful
+        if (!response.ok)
         {
-            // Insert the navigation HTML into the placeholder
-            document.getElementById('navbar-placeholder').innerHTML = navHTML;
-        })
-        .catch(error =>
-        {
-            // Log errors (e.g., if nav.html is missing)
-            console.error('Error loading navigation:', error);
+            throw new Error(`Failed to load footer: ${response.status}`);
+        }
+        return response.text(); // Convert response to text
+    })
+    .then(footerHTML =>
+    {
+        // Insert the footer HTML
+        const footer = document.createElement('footer');
+        footer.innerHTML = footerHTML;
+        document.body.appendChild(footer);
+    })
+    .catch(error =>
+    {
+        // Log errors (e.g., if footer.html is missing)
+        console.error('Error loading footer:', error);
+    });
+
+    // Back to top button
+    function topFunction()
+    {
+        window.scrollTo
+        ({
+            top: 0,
+            behavior: 'smooth'
         });
+    }
 </script>
 
 </html>
