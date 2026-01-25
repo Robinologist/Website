@@ -6,6 +6,16 @@
     --accent-color: #0D1116;
 }
 
+#discord-forum
+{
+    flex:0.45;
+}
+
+#the-process
+{
+    flex: 1;
+}
+
 #pkt-wrapped
 {
     aspect-ratio: 1;
