@@ -44,6 +44,7 @@ body
     display: flex;
     flex: 1 1;
     align-items: center;
+    text-align: center;
     justify-content: center;
 }
 /* #endregion */
@@ -59,6 +60,61 @@ body
 {
     backdrop-filter: blur(4px);
     background: var(--glass-color);
+}
+/* #endregion */
+
+/* #region Buttons */
+button
+{
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: larger;
+
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+
+    border: 2px solid var(--panel-color);
+    border-color: var(--text-color);
+    border-radius: 0.5rem;
+
+    transition: border-color 0.25s, background-color 0.25s, color 0.25s
+}
+
+button:hover
+{
+    background-color: var(--text-color);
+
+    color: var(--accent-text-color);
+    border-color: var(--text-color);
+}
+
+.link-button
+{
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: auto;
+
+    border: 2px solid var(--panel-color);
+    border-color: var(--text-color);
+    border-radius: 0.5rem;
+
+    transition: border-color 0.25s, background-color 0.25s, color 0.25s
+}
+
+.link-button:hover
+{
+    background-color: var(--text-color);
+
+    color: var(--accent-text-color);
+    border-color: var(--text-color);
 }
 /* #endregion */
 

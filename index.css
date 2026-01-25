@@ -1,37 +1,9 @@
-#bg-img
+:root
 {
-    z-index: 1;
-    width: 1500px;
-    height: calc(100% + 40px);
-
-    position: fixed;
-    top: 0;
-    transform: translate(0, -40px);
-
-    object-fit: cover;
-    object-position: top;
-}
-
-.image-overlay
-{
-    z-index: 1;
-    width: min(900px, 100%);
-    
-    display: block;
-    padding: 2rem;
-
-    position: fixed;
-    bottom: 2rem;
-
-}
-
-.image-overlay p
-{
-    color: var(--text-color);
-    text-shadow: 0px 2px 4px var(--accent-text-color);
-
-    font-size: x-large;
-    text-align: center;
-
-    padding: 1.25rem 0;
+    /* Defined Variables */
+    --base-color: #1e211e;
+    --panel-color: #242c24;
+    --accent-color: #000000;
+    --text-color: #ffffff;
+    --accent-text-color: #0D1116;
 }

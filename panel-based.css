@@ -30,6 +30,11 @@ hr
     border-radius: 1px;
 }
 
+.panel hr
+{
+    border: 1px solid var(--base-color);
+}
+
 .flex-half
 {
     flex-basis: 50%;
@@ -39,6 +44,19 @@ hr
 {
     display: flex;
     flex-direction: row;
+}
+
+.horizontal-row a, .horizontal-row p, .locked-horizontal-row a, .locked-horizontal-row p
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px)
+{
+    .horizontal-row a, .horizontal-row p, .locked-horizontal-row a, .locked-horizontal-row p
+    {
+        width: auto;
+    }
 }
 /* #endregion */
 
@@ -79,6 +97,11 @@ hr
     .horizontal-row
     {
         flex-direction: column;
+    }
+
+    button
+    {
+        width: auto;
     }
 }
 /* #endregion */
@@ -140,24 +163,6 @@ header p, main p
     text-align: center;
     font-size: x-large;
 }
-
-.link-button
-{
-    margin: 2rem;
-    text-align: center;
-}
-
-.link-button a
-{
-    color: var(--panel-color);
-    font-size: x-large;
-    text-decoration: none;
-
-    background-color: var(--accent-color);
-
-    border: 1rem var(--accent-color) solid;
-    border-radius: var(--border-radius-small);
-}
 /* #endregion */
 
 /* #region Footer */
@@ -174,23 +179,9 @@ footer
 
 #top-button
 {
-    color: var(--text-color);
-    background-color: transparent;
-
     margin: 0rem 1rem 1rem 1rem;
     padding: 0.5rem 1rem;
 
-    border: 2px solid var(--panel-color);
-    border-color: var(--text-color);
-    border-radius: 0.5rem;
-
-    transition: border-color 0.25s, background-color 0.25s, color 0.25s
-}
-
-#top-button:hover
-{
-    background-color: var(--text-color);
-    color: var(--accent-text-color);
-    border-color: var(--text-color);
+    width: fit-content
 }
 /* #endregion */

@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Robin Engdahl</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <main>
-        <div class="flex-container">
-            <img id="bg-img" src="images/homepage/bg.png" alt="background portrait image">
-            <div class="image-overlay">
+        <div class="flex-container panel">
+            <div class="flex-half">
+                <img src="images/homepage/bg.png" alt="background portrait image">
+            </div>
+            <div class="flex-half">
                 <p><strong>Hi, I'm Robin!</strong> I'm a musician, programmer, editor, and writer.</p>
-                <p>This portfolio website is where I've documented all of my creative projects from the past couple of years so that you (yes, you) can peruse them all!</p>
+                <p>This portfolio website is where I've documented all of my creative projects from the past couple of years so that you (yes, you) can peruse all the cool things I've made!</p>
+            </div>
+        </div>
+        <div class="panel">
+            <h2>Proudest Works</h2>
+            <div class="horizontal-row">
+                <a class="link-button" href="compositions.html">An Autumn Murmuration [Composition]</a>
+                <a class="link-button" href="parkour-tag.html">Parkour Tag [Programming]</a>
+                <a class="link-button" href="unity-projects.html#RSS">Robin's Simple Spin [Programming]</a>
             </div>
         </div>
     </main>
@@ -45,6 +56,40 @@
         // Log errors (e.g., if nav.html is missing)
         console.error('Error loading navigation:', error);
     });
+
+    // Fetch the footer component
+    fetch('footer.html')
+    .then(response =>
+    {
+        // Check if the request was successful
+        if (!response.ok)
+        {
+            throw new Error(`Failed to load footer: ${response.status}`);
+        }
+        return response.text(); // Convert response to text
+    })
+    .then(footerHTML =>
+    {
+        // Insert the footer HTML
+        const footer = document.createElement('footer');
+        footer.innerHTML = footerHTML;
+        document.body.appendChild(footer);
+    })
+    .catch(error =>
+    {
+        // Log errors (e.g., if footer.html is missing)
+        console.error('Error loading footer:', error);
+    });
+
+    // Back to top button
+    function topFunction()
+    {
+        window.scrollTo
+        ({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
 
 </html>
