@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Way Down - Robin Engdahl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="panel-based.css">
+    <link rel="stylesheet" href="photography.css">
+</head>
+
+<body>
+    <main>
+        <div class="panel">
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09401.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09564.JPG" alt="photo">
+            </div>
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09488.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09456.JPG" alt="photo">
+            </div>
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09517.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09552.JPG" alt="photo">
+            </div>
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09572.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09588.JPG" alt="photo">
+            </div>
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09436.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09556.JPG" alt="photo">
+            </div>
+            <div class="horizontal-row">
+                <img class="media-embed" src="./images/photography/DSC09592.JPG" alt="photo">
+                <img class="media-embed" src="./images/photography/DSC09602.JPG" alt="photo">
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    // Fetch the navigation component
+    fetch('nav.html')
+    .then(response =>
+    {
+        // Check if the request was successful
+        if (!response.ok)
+        {
+            throw new Error(`Failed to load nav: ${response.status}`);
+        }
+        return response.text(); // Convert response to text
+    })
+    .then(navHTML =>
+    {
+        // Insert the navigation HTML
+        const nav = document.createElement('nav');
+        nav.innerHTML = navHTML;
+        document.body.prepend(nav);
+    })
+    .catch(error =>
+    {
+        // Log errors (e.g., if nav.html is missing)
+        console.error('Error loading navigation:', error);
+    });
+
+    // Fetch the footer component
+    fetch('footer.html')
+    .then(response =>
+    {
+        // Check if the request was successful
+        if (!response.ok)
+        {
+            throw new Error(`Failed to load footer: ${response.status}`);
+        }
+        return response.text(); // Convert response to text
+    })
+    .then(footerHTML =>
+    {
+        // Insert the footer HTML
+        const footer = document.createElement('footer');
+        footer.innerHTML = footerHTML;
+        document.body.appendChild(footer);
+    })
+    .catch(error =>
+    {
+        // Log errors (e.g., if footer.html is missing)
+        console.error('Error loading footer:', error);
+    });
+
+    // Back to top button
+    function topFunction()
+    {
+        window.scrollTo
+        ({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</html>
