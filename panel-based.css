@@ -4,7 +4,7 @@
     --text-color: #000000;
     --accent-text-color: #ffffff;
     --border-radius-large: 1rem;
-    --max-panel-width: 50rem;
+    --max-panel-width: 60rem;
 
     /* Calculated Variables */
     --border-radius-small: calc(var(--border-radius-large) / 2);

@@ -235,4 +235,41 @@ nav .page-tab-blurb p, .page-tab-blurb a
 {
     position: absolute;
 }
+
+#hamburger-button
+{
+    display: none;
+}
+
+@media screen and (max-width: 950px)
+{
+    nav .page-tab
+    {
+        display: none;
+    }
+    
+    #hamburger-button
+    {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    #hamburger-button button
+    {
+        margin: 0;
+        width: 3.25rem;
+        height: calc(3.25rem - 1.5px);
+        border-radius: 0;
+        border: #000000 solid var(--glass-color);
+    }
+
+    #hamburger-button p
+    {
+        position: relative;
+        top: -0.6rem;
+    }
+}
 /* #endregion */
