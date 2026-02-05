@@ -251,49 +251,7 @@
     </main>
 </body>
 
-<script>
-    // Slideshow logic
-    let currentSlide = 1;
-    showSlides(currentSlide);
-
-    function newSlide(n)
-    {
-        showSlides(currentSlide += n);
-    }
-
-    function showSlides(n)
-    {
-        let slides = document.getElementsByClassName("slide");
-        let captionText = document.getElementById("caption");
-        if (n > slides.length) {currentSlide = 1}
-        if (n < 1) {currentSlide = slides.length}
-        for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
-        slides[currentSlide-1].style.display = "block";
-    }
-
-    // Fetch the navigation component
-    fetch('nav.html')
-    .then(response =>
-    {
-        // Check if the request was successful
-        if (!response.ok)
-        {
-            throw new Error(`Failed to load nav: ${response.status}`);
-        }
-        return response.text(); // Convert response to text
-    })
-    .then(navHTML =>
-    {
-        // Insert the navigation HTML
-        const nav = document.createElement('nav');
-        nav.innerHTML = navHTML;
-        document.body.prepend(nav);
-    })
-    .catch(error =>
-    {
-        // Log errors (e.g., if nav.html is missing)
-        console.error('Error loading navigation:', error);
-    });
-</script>
+<script src="./javascript/slideshow.js"></script>
+<script src="./javascript/navbar.js"></script>
 
 </html>
