@@ -44,6 +44,12 @@ hr
     flex-direction: row;
 }
 
+.vertical-row
+{
+    display: flex;
+    flex-direction: column;
+}
+
 .horizontal-row a, .horizontal-row p, .horizontal-row i, .locked-horizontal-row a, .locked-horizontal-row p, .locked-horizontal-row i
 {
     width: 100%;
