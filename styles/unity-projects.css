@@ -3,9 +3,8 @@
     /* Defined Variables */
     --base-color: #3d384f;
     --panel-color: #4e476a;
-    --accent-color: #0D1116;
+    --accent-color: #000000;
     --text-color: #ffffff;
-    --accent-text-color: #000000;
 }
 
 @media screen and (max-width: 950px)
