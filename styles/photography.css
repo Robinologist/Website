@@ -6,3 +6,17 @@
     --text-color: #000000;
     --accent-color: #ffffff;
 }
+
+#columns
+{
+    columns: 2;
+
+}
+
+@media screen and (max-width: 950px)
+{
+    #columns
+    {
+        columns: 1;
+    }
+}
