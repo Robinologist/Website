@@ -86,6 +86,7 @@ button:hover
 
     color: var(--accent-color);
     border-color: var(--text-color);
+    cursor: pointer;
 }
 
 .link-button
@@ -105,7 +106,7 @@ button:hover
     border-color: var(--text-color);
     border-radius: 0.5rem;
 
-    transition: border-color 0.25s, background-color 0.25s, color 0.25s
+    transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
 
 .link-button:hover
@@ -114,6 +115,7 @@ button:hover
 
     color: var(--accent-color);
     border-color: var(--text-color);
+    cursor: pointer;
 }
 /* #endregion */
 

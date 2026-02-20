@@ -9,16 +9,8 @@
 
 #main-content
 {
-    height: 72.5vh;
+    height: 73vh; /* Magic number */
 }
-
-/* #featured
-{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
 
 @media screen and (max-width: 950px)
 {
@@ -26,9 +18,12 @@
     {
         height: 100%;
     }
+}
 
-    /* #featured
-    {
-        position: relative;
-    } */
+#portrait
+{
+    display: flexbox;
+    aspect-ratio: 1;
+    object-fit: contain;
+    height: 100%;
 }
