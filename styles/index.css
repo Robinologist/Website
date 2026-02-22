@@ -12,18 +12,20 @@
     height: 73vh; /* Magic number */
 }
 
+#portrait
+{
+    width: 590px; /* Magic number 2 */
+}
+
 @media screen and (max-width: 950px)
 {
     #main-content
     {
         height: 100%;
     }
-}
 
-#portrait
-{
-    display: flexbox;
-    aspect-ratio: 1;
-    object-fit: contain;
-    height: 100%;
+    #portrait
+    {
+        width: 100%;
+    }
 }
