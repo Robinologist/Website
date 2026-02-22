@@ -234,7 +234,7 @@ nav .page-tab-blurb p, .page-tab-blurb a
     display: none;
 }
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 950px), screen and (pointer: coarse)
 {
     nav .page-tab
     {
