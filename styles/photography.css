@@ -7,7 +7,7 @@
     --accent-color: #ffffff;
 }
 
-#columns
+.columns
 {
     columns: 2;
     column-gap: 0;
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 950px)
 {
-    #columns
+    .columns
     {
         columns: 1;
     }
