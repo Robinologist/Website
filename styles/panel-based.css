@@ -73,6 +73,12 @@ hr
         width: min(100% - 2rem, var(--max-panel-width));
     }
 
+    .panel p
+    {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
     hr
     {
         margin: auto;
