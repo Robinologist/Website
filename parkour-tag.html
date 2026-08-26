@@ -7,14 +7,19 @@
     <title>Parkour Tag - Robin Engdahl</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/panel-based.css">
+    <link rel="stylesheet" href="styles/slideshow.css">
     <link rel="stylesheet" href="styles/parkour-tag.css">
 </head>
 
 <body>
     <header>
         <div class="panel">
-            <p><strong>Parkour Tag</strong> (abbreviated to <strong>PKT</strong>) is my longest-running programming passion project, started back in <i>October 2021</i>.</p>
-            <p>In short, PKT is a game I programmed for my friends to play within <i>Minecraft</i>, using the game's built-in datapack programming language. Throughout the years I've updated it many times to add new gamemodes, features, and bug-fixes, and I've ended up completely refactoring and redesigning the game multiple times from the ground up to incorporate new programming skills and techniques that I learn.</p>
+            <p><strong>Parkour Tag</strong> (abbreviated to <strong>PKT</strong>) is my longest-running programming
+                passion project, started back in <i>October 2021</i>.</p>
+            <p>In short, PKT is a game I programmed for my friends to play within <i>Minecraft</i>, using the game's
+                built-in datapack programming language. Throughout the years I've updated it many times to add new
+                gamemodes, features, and bug-fixes, and I've ended up completely refactoring and redesigning the game
+                multiple times from the ground up to incorporate new programming skills and techniques that I learn.</p>
         </div>
     </header>
     <main>
@@ -22,31 +27,118 @@
         <div class="flex-container panel">
             <div class="flex-half">
                 <h2>– Diciplines –</h2>
-                <p>Beyond just programming, Parkour Tag as a project has encompassed many of the artistic disciplines that I love, including visual art, music creation, and video editing.</p>
-                <p>I think the thing that best shows how these mediums intersect is the trailer I made in December of 2022 to announce the next version of PKT that I had been working on in secret.</p>
+                <p>Beyond just programming, Parkour Tag as a project has encompassed many of the artistic disciplines
+                    that I love, including visual art, music creation, and video editing.</p>
+                <p>I think the thing that best shows how these mediums intersect is the trailer I made in December of
+                    2022 to announce the next version of PKT that I had been working on in secret.</p>
             </div>
             <div class="flex-half">
-                <iframe class="media-embed video-embed"  src="https://www.youtube.com/embed/u41cZeit3VI" title="Parkour Tag Trailer" alt="trailer video embed" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="media-embed video-embed" src="https://www.youtube.com/embed/u41cZeit3VI"
+                    title="Parkour Tag Trailer" alt="trailer video embed" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="vertical-row">
+            <div class="three-grid">
+                <div class="panel vertical-row gamemode">
+                    <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/leather_boots.png"
+                        alt="minecraft leather boots">
+                    <p class="bold"><strong>Default</strong></p>
+                    <p>The basic game is played between two teams, Hunters and Runners. The goal for Hunters is to catch
+                        all Runners, while the Runners' objective is to stay alive until a (configurable) time limit is
+                        reached. Hunters can eliminate any Runner with a single melee attack, so Runners have to
+                        cooperate using time-limited highlight items that make Hunters visible through walls to plan
+                        their movement routes.</p>
+                </div>
+                <div class="panel vertical-row gamemode">
+                    <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/pufferfish.png"
+                        alt="minecraft pufferfish">
+                    <p class="bold"><strong>Fishing Frenzy</strong></p>
+                    <p>A simple varient that adds some flavor to the base game, <i>Fishing Frenzy</i> sees Hunters get a
+                        fishing rod to interrupt Runner movement during tight chases, while Runners get a fish with the
+                        knockback enchantment to punch Hunters away at the risk of getting within melee range, and to
+                        hit other Runners out of (or into) danger. It's a small adjustment, but makes the game
+                        drastically sillier due to the new shenaniganary possible.</p>
+                </div>
+                <div class="panel vertical-row gamemode">
+                    <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/iron_axe.png"
+                        alt="minecraft iron axe">
+                    <p class="bold"><strong>Battle</strong></p>
+                    <p>A simple combat gamemode, <i>Battle</i> pits two teams of players against each other with the
+                        same kits of gear. Optional settings include turning fall damage on and off as well as
+                        individually changing the primary, secondary, and utility weapons between several options.</p>
+                </div>
+            </div>
+            <div class="two-grid">
+                <div class="panel vertical-row gamemode">
+                    <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/blaze_powder.png"
+                        alt="minecraft blaze powder">
+                    <p class="bold"><strong>Modifier Mixup</strong></p>
+                    <p>This gamemode applies a random temporary modifier to the game every seconds, like a chaos mod.
+                        Modifiers include reduced gravity, sudden aggravated goats, utility consumables, and unexpected
+                        team swaps, among others. Despite their chaotic nature, each modifier is balanced to give both
+                        teams a roughly equal advantage/disadvantage. The team switch modifier in particular is
+                        gamemode-defining – knowing that at any time your role can be flipped disincentivizes grouping
+                        up and leads to lots of hilarious sudden panic and exciting clutch wins.</p>
+                </div>
+                <div class="panel vertical-row gamemode">
+                    <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/banner_pattern.png"
+                        alt="minecraft banner pattern">
+                    <p class="bold"><strong>Flagmen</strong></p>
+                    <p>In this gamemode, players tag each other to steal a flag back and forth. The team with the flag
+                        constantly fills up a shared zero-sum progress bar (meaning the other team will need to undo
+                        that progress before making their own), and if they reach its end, they win. Tactically, there's
+                        a lot of depth in timing and angling your hits so that the flagbearer can't immediately
+                        retaliate – hitting them into a wall or waiting until they commit to a jump can be the
+                        difference between winning and losing in the long run.</p>
+                </div>
+            </div>
+            <div class="flex-container panel vertical-row gamemode">
+                <img class="media-embed gamemode-thumbnail" src="images/parkour-tag/spyglass.png"
+                    alt="minecraft spyglass">
+                <p class="bold"><strong>Spyshot</strong></p>
+                <p>This gamemode is my proudest work of asymmetrical game design to date. In <i>Spyshot</i>, In addition
+                    to their one-shotting melee attacks, Hunters gain a cooldown-based temporary invisibility power. To
+                    balance that, Runners are equipped with effectively a gun, which shoots an instant-kill raycast on a
+                    long cooldown. In trying to get close to their Runner targets, Hunters must sneakily move between
+                    spots of cover, while Runners are constantly seeking safer ground and listening closely for the
+                    footsteps and distinctive cloaking sounds of any nearby Hunters. This makes for an incredibly tense
+                    game, in which paranoid Runners keep their heads on a swivel and Hunters plan diverse and unexpected
+                    routes to get from point A to point B. The base Minecraft mechanics of movement speed add a layer to
+                    this stealth focus, with Hunters having to choose between sprinting (which creates visible particles
+                    and sound), walking (which creates sound), and sneaking (which does neither). Overall, this gamemode
+                    is my personal favorite because of the suspense it creates.</p>
             </div>
         </div>
         <hr>
         <div class="flex-container panel">
-            <img id="organization-img" class="flex-half" src="images/parkour-tag/code-frequency.png" alt="github activity chart screenshot">
+            <img id="organization-img" class="flex-half" src="images/parkour-tag/code-frequency.png"
+                alt="github activity chart screenshot">
             <div id="organization-text" class="flex-half">
                 <h2>– Organization –</h2>
-                <p>In order to better manage and keep track of Parkour Tag progress, I started a private Trello board as a TODO list and taught myself to use Github for version control.</p>
-                <p>Developing a Github workflow was a particularly helpful skill, not just for PKT development, but for other projects as well.</p>
-                <a class="link-button" href="https://github.com/Robinologist/ParkourTag/commits/main/">Here's my PKT commit history!</a>
+                <p>In order to better manage and keep track of Parkour Tag progress, I started a private Trello board as
+                    a TODO list and taught myself to use Github for version control.</p>
+                <p>Developing a Github workflow was a particularly helpful skill, not just for PKT development, but for
+                    other projects as well.</p>
+                <a class="link-button" href="https://github.com/Robinologist/ParkourTag/commits/main/">Here's my PKT
+                    commit history!</a>
             </div>
         </div>
         <hr>
         <div class="panel">
             <h2>— Community —</h2>
-            <p>Since Parkour Tag is a small game designed for my friends to play, said friends act as my playtesters, offering a lot of helpful feedback and good ideas for me to implement.</p>
-            <p>My friend group's Discord server has a forum channel specifically for PKT bug reports and miscellaneous suggestions, as well as a channel I use to post changelogs for each update and blog-like accounts of programming challenges I run into.</p>
+            <p>Since Parkour Tag is a small game designed for my friends to play, said friends act as my playtesters,
+                offering a lot of helpful feedback and good ideas for me to implement.</p>
+            <p>My friend group's Discord server has a forum channel specifically for PKT bug reports and miscellaneous
+                suggestions, as well as a channel I use to post changelogs for each update and blog-like accounts of
+                programming challenges I run into.</p>
             <div class="flex-container">
-                <img id="discord-forum" class="flex-half media-embed" src="images/parkour-tag/discord-forum.png" alt="discord forum channel screenshot">
-                <img id="the-process" class="flex-half media-embed" src="images/parkour-tag/the-process.png" alt="technical refactor explanation screenshot">
+                <img id="discord-forum" class="flex-half media-embed" src="images/parkour-tag/discord-forum.png"
+                    alt="discord forum channel screenshot">
+                <img id="the-process" class="flex-half media-embed" src="images/parkour-tag/the-process.png"
+                    alt="technical refactor explanation screenshot">
             </div>
         </div>
         <hr>
@@ -54,15 +146,19 @@
             <h2>— Bonus Blog Posts —</h2>
             <img class="media-embed" src="images/parkour-tag/changelog-3.png" alt="changelog screnshot #1">
             <div class="flex-container">
-                <img class="flex-half media-embed" src="images/parkour-tag/changelog-1.png" alt="changelog screnshot #3">
-                <img class="flex-half media-embed" src="images/parkour-tag/competition-announcement.png" alt="map-building competition announcement">
+                <img class="flex-half media-embed" src="images/parkour-tag/changelog-1.png"
+                    alt="changelog screnshot #3">
+                <img class="flex-half media-embed" src="images/parkour-tag/competition-announcement.png"
+                    alt="map-building competition announcement">
             </div>
             <img class="media-embed" src="images/parkour-tag/changelog-2.png" alt="changelog screnshot #2">
         </div>
         <hr>
         <div class="panel flex-container">
             <img class="flex-half media-embed" src="images/parkour-tag/pkt-wrapped.png" alt="pkt wrapped slideshow">
-            <iframe id="pkt-wrapped" class="flex-half media-embed" src="https://docs.google.com/presentation/d/e/2PACX-1vQOqFOoO2uvMcpP1ILTC-N2lcwR77aYA204L8jEmK59xpUE2CCotFaGQ8Ql8j4lVdbGfmgy_Sv1y1fN/pubembed?start=false&loop=true&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <iframe id="pkt-wrapped" class="flex-half media-embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQOqFOoO2uvMcpP1ILTC-N2lcwR77aYA204L8jEmK59xpUE2CCotFaGQ8Ql8j4lVdbGfmgy_Sv1y1fN/pubembed?start=false&loop=true&delayms=3000"
+                frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
     </main>
 </body>

@@ -9,7 +9,7 @@
 
 #discord-forum
 {
-    flex:0.45;
+    flex: 0.45;
 }
 
 #the-process
@@ -24,6 +24,55 @@
 
 @media screen and (max-width: 950px)
 {
-    #organization-text{order:1}
-    #organization-img{order:2}
+    #organization-text
+    {
+        order: 1
+    }
+
+    #organization-img
+    {
+        order: 2
+    }
+
+    .gamemode-thumbnail
+    {
+        align-self: center;
+    }
+}
+
+.gamemode-thumbnail
+{
+    display: flex;
+    width: 16rem;
+    height: 16rem;
+}
+
+.gamemode
+{
+    display: flex;
+    align-items: center;
+}
+
+.gamemode p
+{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.three-grid,
+.two-grid
+{
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-auto-flow: column;
+}
+
+@media screen and (max-width: 950px)
+{
+
+    .three-grid,
+    .two-grid
+    {
+        grid-auto-flow: row;
+    }
 }

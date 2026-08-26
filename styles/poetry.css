@@ -7,35 +7,6 @@
     --text-color: #ffffff;
 }
 
-.slide
-{
-    display: none;
-    padding: 1rem 2rem 2rem 2rem;
-    margin: 0 4rem;
-}
-
-.slide p
-{
-    font-size: larger;
-    padding: 0.25rem 0;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.slide i
-{
-    font-size: medium;
-    display: block;
-    padding: 0.5rem 0.25rem 1rem 0.25rem;
-    text-align: center;
-}
-
-@media screen and (max-width: 950px)
-{
-    .first-order{order:1}
-    .second-order{order:2}
-    .third-order{order:3}
-}
-
 @media screen and (max-width: 700px)
 {
     .slide
