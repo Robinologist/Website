@@ -9,6 +9,18 @@
 
 .audio-embed
 {
-    align-self: flex-end;
-    justify-self: flex-end;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.download-button a
+{
+    padding: 0.25rem 1rem;
+    margin-left: 0;
+    width: fit-content;
+}
+
+.backwards-flex
+{
+    flex-direction: row-reverse;
 }
