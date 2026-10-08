@@ -29,3 +29,16 @@
         width: 100%;
     }
 }
+
+.contact
+{
+    align-content: center;
+}
+
+.contact
+{
+    font-size: large;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
